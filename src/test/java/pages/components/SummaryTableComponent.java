@@ -7,21 +7,21 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class SummaryTable {
+public class SummaryTableComponent {
 
     private final SelenideElement modalDialog = $(".table-responsive");
 
-    public SummaryTable checkFields(String key, String value) {
+    public SummaryTableComponent checkFields(String key, String value) {
         modalDialog.$(byText(key)).parent().shouldHave(text(value));
         return this;
     }
 
-    public SummaryTable shouldAppear() {
+    public SummaryTableComponent shouldAppear() {
         modalDialog.shouldBe(visible);
         return this;
     }
 
-    public SummaryTable shouldNotAppear() {
+    public SummaryTableComponent shouldNotAppear() {
         modalDialog.shouldNotBe(visible);
         return this;
     }

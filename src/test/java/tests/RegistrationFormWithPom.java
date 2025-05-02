@@ -2,13 +2,13 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
-import pages.components.SummaryTable;
+import pages.components.SummaryTableComponent;
 
 import static java.lang.Thread.sleep;
 
 public class RegistrationFormWithPom extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
-    SummaryTable summaryTable = new SummaryTable();
+    SummaryTableComponent summaryTable = new SummaryTableComponent();
 
     @Test
         //Проверка формы регистрации с заполнением всех полей
