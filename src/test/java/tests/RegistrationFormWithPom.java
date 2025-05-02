@@ -2,7 +2,7 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
-import components.SummaryTable;
+import pages.components.SummaryTable;
 
 import static java.lang.Thread.sleep;
 
