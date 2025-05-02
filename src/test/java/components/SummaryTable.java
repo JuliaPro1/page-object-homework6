@@ -1,4 +1,4 @@
-package pages;
+package components;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -10,9 +10,6 @@ import static com.codeborne.selenide.Selenide.$;
 public class SummaryTable {
 
     private final SelenideElement modalDialog = $(".table-responsive");
-   // private final SelenideElement modalDialog = $(".modal-content");
-    //private final SelenideElement tableRows = $(".table-responsive");
-
 
     public SummaryTable checkFields(String key, String value) {
         modalDialog.$(byText(key)).parent().shouldHave(text(value));

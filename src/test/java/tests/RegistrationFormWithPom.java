@@ -2,7 +2,7 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
-import pages.SummaryTable;
+import components.SummaryTable;
 
 import static java.lang.Thread.sleep;
 
@@ -14,6 +14,7 @@ public class RegistrationFormWithPom extends TestBase {
         //Проверка формы регистрации с заполнением всех полей
     void successRegistrationAllFilldsTest() {
         registrationPage.openPage()
+                .bannersRemove()
                 .setFirstName("Julia")
                 .setLastName("Amel")
                 .setGender("Female")
@@ -46,6 +47,7 @@ public class RegistrationFormWithPom extends TestBase {
         //Проверка формы регистрации с заполнением только обязательных полей
     void successRegistrationRequiredFilldsTest() {
         registrationPage.openPage()
+                .bannersRemove()
                 .setFirstName("Julia")
                 .setLastName("Amel")
                 .setGender("Female")
@@ -64,6 +66,7 @@ public class RegistrationFormWithPom extends TestBase {
         //Проверка на то, что форма регистрации не отправляется если не заполнены обязательные поля
     void negativeRegistrationTest() {
         registrationPage.openPage()
+                .bannersRemove()
                 .buttonClick();
 
         summaryTable.shouldNotAppear();
